@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { User } from '@/app/lib/definitions';
 type Filter = {
   [K in keyof User]?: string;
@@ -14,13 +14,17 @@ const emptyFilter: Filter = {
 export default function UsersTable({ users }: { users: User[] }) {
   const [filter, setFilter] = useState<Filter>(emptyFilter);
 
-  const filteredUsers = users?.filter(user => {
-    return Object.entries(filter).every(([key, value]) => {
-      if (!value) return true;
-      if (key === 'status' || key === 'gender') return user[key] === value;
-      return user[key as keyof User].toString().toUpperCase().includes(value.toUpperCase());
-    });
-  });
+  const filteredUsers = useMemo(
+    () =>
+      users?.filter(user => {
+        return Object.entries(filter).every(([key, value]) => {
+          if (!value) return true;
+          if (key === 'status' || key === 'gender') return user[key] === value;
+          return user[key as keyof User].toString().toUpperCase().includes(value.toUpperCase());
+        });
+      }),
+    [users, filter]
+  );
 
   return (
     <div className="w-full">

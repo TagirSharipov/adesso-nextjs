@@ -3,11 +3,13 @@ import Pagination from '../ui/users/pagination';
 import UsersTable from '../ui/users/table';
 // TODO  add suspense
 export default async function Users(props: {
-  searchParams?: Promise<{
+  searchParams?: {
     page?: string;
-  }>;
+  };
 }) {
-  const { users, totalPages } = await fetchUsers(props?.page);
+  const searchParams = await props?.searchParams;
+
+  const { users, totalPages } = await fetchUsers(searchParams?.page);
   console.log('totalPages', totalPages);
 
   return (
