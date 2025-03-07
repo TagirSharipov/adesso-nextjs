@@ -1,11 +1,11 @@
 import { fetchUsers } from '../lib/api';
-import Pagination from '../ui/users/pagination';
-import UsersTable from '../ui/users/table';
+import Pagination from '@/app/ui/users/pagination';
+import UsersTable from '@/app/ui/users/table';
 // TODO  add suspense
 export default async function Users(props: {
-  searchParams?: {
+  searchParams?: Promise<{
     page?: string;
-  };
+  }>;
 }) {
   const searchParams = await props?.searchParams;
 
