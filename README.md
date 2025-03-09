@@ -6,6 +6,10 @@
 
 This project was created as part of a coding test for Adesso. It utilizes the public GoRest API (https://gorest.co.in/) to display a list of users and their details. The application is built with Next.js and TypeScript, incorporating features like server-side rendering, multilingual support, and UI component styling.
 
+## Demo
+
+https://adesso-nextjs.vercel.app/it
+
 ## Features
 
 - **User Listing:** Displays a paginated list of users fetched from the GoRest API.
@@ -54,3 +58,7 @@ The application uses the GoRest API, which is a public and read-only API. No API
 - The UI/UX design is implemented according to personal preference, utilizing a mix of styling approaches.
 - Multilingual support is implemented using JSON files for different languages.
 - The filtering feature allows users to filter the user list based on name, email, gender, and status.
+
+## ToDo
+
+Among the many improvements that should be made, the most desired is to add Suspense to display a TableSkeleton component while loading data. I have actually added it, but I encountered some confusion with disabling optimistic rendering when changing the table page. So I decided to study it deeper lately.
