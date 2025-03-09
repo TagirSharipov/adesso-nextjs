@@ -5,3 +5,6 @@ export type User = {
   gender: string;
   status: string;
 };
+export const locales = ['en', 'it'] as const;
+
+export type Locale = (typeof locales)[number];

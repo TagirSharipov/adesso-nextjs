@@ -1,0 +1,18 @@
+{
+  "homepage": {
+    "main": "Create React App, once a beloved tool for bootstrapping React applications, has now been laid to rest. As the creators of React recommend using frameworks for modern web development, this test assignment has been completed using Next.js.",
+    "title": "Intro"
+  },
+  "users": {
+    "title": "Users",
+    "id": "ID",
+    "name": "Name",
+    "email": "Email",
+    "gender": "Gender",
+    "status": "Status",
+    "back": "Back",
+    "clear.filter": "Clear filters",
+    "search.name": "Search by name",
+    "search.email": "Search by email"
+  }
+}

@@ -5,3 +5,8 @@ export async function fetchUsers(page: string = '1') {
 
   return { users, totalPages: Number(totalPages) || 1 };
 }
+export async function fetchUser(user: string) {
+  const res = await fetch('https://gorest.co.in/public/v2/users/' + user);
+
+  return await res.json();
+}

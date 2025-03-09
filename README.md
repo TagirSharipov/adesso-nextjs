@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+#### filepath: /Users/tagir/Projects/adesso-app/README.md
 
-## Getting Started
+# Adesso App - Coding Test
 
-First, run the development server:
+## Description
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This project was created as part of a coding test for Adesso. It utilizes the public GoRest API (https://gorest.co.in/) to display a list of users and their details. The application is built with Next.js and TypeScript, incorporating features like server-side rendering, multilingual support, and UI component styling.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **User Listing:** Displays a paginated list of users fetched from the GoRest API.
+- **User Details:** Allows viewing detailed information for each user.
+- **Filtering:** Supports filtering the user list by name, email, gender, and status.
+- **Multilingual Support:** Implements basic multilingual support for English and Italian.
+- **Modern UI:** Uses a modern UI design with Tailwind CSS
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Technologies Used
 
-## Learn More
+- Next.js
+- TypeScript
+- React
+- Tailwind CSS
+- GoRest API
 
-To learn more about Next.js, take a look at the following resources:
+## Setup Instructions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1.  **Clone the repository:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    git clone <repository_url>
+    ```
 
-## Deploy on Vercel
+2.  **Install dependencies:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    cd adesso-app
+    npm install
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3.  **Run the development server:**
+
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open your browser and navigate to `http://localhost:3000`.**
+
+## API Usage
+
+The application uses the GoRest API, which is a public and read-only API. No API key is required.
+
+## Notes
+
+- The UI/UX design is implemented according to personal preference, utilizing a mix of styling approaches.
+- Multilingual support is implemented using JSON files for different languages.
+- The filtering feature allows users to filter the user list based on name, email, gender, and status.

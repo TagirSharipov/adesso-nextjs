@@ -1,0 +1,19 @@
+{
+  "homepage": {
+    "main": "Create React App, una volta uno strumento amato per avviare applicazioni React, è stato ora messo a riposo. Poiché i creatori di Next.js raccomandano l'uso di framework per lo sviluppo web moderno, questo compito di prova è stato completato utilizzando Next.js.",
+    "title": "Intro"
+  },
+
+  "users": {
+    "title": "Utenti",
+    "id": "ID",
+    "name": "Nome",
+    "email": "Email",
+    "gender": "Genere",
+    "status": "Stato",
+    "back": "Indietro",
+    "clear.filter": "Rimuovi filtri",
+    "search.name": "Cerca per nome",
+    "search.email": "Cerca per email"
+  }
+}
