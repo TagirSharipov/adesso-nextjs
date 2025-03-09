@@ -1,12 +1,10 @@
-#### filepath: /Users/tagir/Projects/adesso-app/README.md
-
 # Adesso App - Coding Test
 
 ## Description
 
 This project was created as part of a coding test for Adesso. It utilizes the public GoRest API (https://gorest.co.in/) to display a list of users and their details. The application is built with Next.js and TypeScript, incorporating features like server-side rendering, multilingual support, and UI component styling.
 
-## Demo
+## Live Demo
 
 https://adesso-nextjs.vercel.app/it
 
