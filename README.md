@@ -29,13 +29,13 @@ https://adesso-nextjs.vercel.app/it
 1.  **Clone the repository:**
 
     ```bash
-    git clone <repository_url>
+    git clone https://github.com/TagirSharipov/adesso-nextjs.git <repository-directory>
     ```
 
 2.  **Install dependencies:**
 
     ```bash
-    cd adesso-app
+    cd <repository-directory>
     npm install
     ```
 
