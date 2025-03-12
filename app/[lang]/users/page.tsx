@@ -3,8 +3,11 @@ import { fetchUsers } from '../../lib/api';
 import Pagination from '@/app/ui/users/pagination';
 import UsersTable from '@/app/ui/users/table';
 import { Locale } from '@/app/lib/definitions';
+import { Suspense } from 'react';
 
-export default async function Users(props: {
+import UsersSkeleton from '@/app/ui/users/users-table-skeleton';
+
+export default async function UserPage(props: {
   params: Promise<{
     lang: Locale;
   }>;
@@ -14,8 +17,18 @@ export default async function Users(props: {
 }) {
   const searchParams = await props?.searchParams;
   const { lang } = await props?.params;
+
+  return (
+    <Suspense fallback={<UsersSkeleton />} key={lang + searchParams?.page}>
+      <Users lang={lang} page={searchParams?.page || '1'} />
+    </Suspense>
+  );
+}
+
+const Users = async ({ lang, page }: { lang: Locale; page: string }) => {
   const dictionary = await getDictionary(lang);
-  const { users, totalPages } = await fetchUsers(searchParams?.page);
+
+  const { users, totalPages } = await fetchUsers(page);
 
   return (
     <div>
@@ -28,4 +41,4 @@ export default async function Users(props: {
       </div>
     </div>
   );
-}
+};
