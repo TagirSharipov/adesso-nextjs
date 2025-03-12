@@ -56,7 +56,3 @@ The application uses the GoRest API, which is a public and read-only API. No API
 - The UI/UX design is implemented according to personal preference, utilizing a mix of styling approaches.
 - Multilingual support is implemented using JSON files for different languages.
 - The filtering feature allows users to filter the user list based on name, email, gender, and status.
-
-## ToDo
-
-Among the many improvements that should be made, the most desired is to add Suspense to display a TableSkeleton component while loading data. I have actually added it, but I encountered some confusion with disabling optimistic rendering when changing the table page. So I decided to study it deeper lately.
